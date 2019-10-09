@@ -1,0 +1,13 @@
+body {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 5%;
+}
+
+#layout {
+    display: inline-block;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 5px 10px 5px 10px;
+}

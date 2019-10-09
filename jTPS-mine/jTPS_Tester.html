@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>JavaScript TPS</title>
+    <link rel="stylesheet" type="text/css" href="./mycss.css" />
+
+    <script src="./AddToNum_Transaction.js"></script>
+    <script src="./AndMask_Transaction.js"></script>
+    <script src="./Num.js"></script>
+    <script src="./jsTPS.js"></script>
+    
+
+    <!-- FOR TESTING OUR TODO LISTS -->
+    <script src="./Compute.js" ></script>
+
+</head>
+
+<body>
+    <div id="layout" >
+        <div class="text_toolbar">
+            <span id="enter_amount_prompt">Enter an amount:</span>
+            <input type="text" id="amount_textfield"  />
+            <button id="submit_button"  onclick="buttonClick()">Submit</button>
+        </div>
+        
+    <div>
+        <select id="select_menu">  
+                <option value="add_transaction">Add a Transaction</option>
+                <option value="undo_transaction">Undo a Transaction</option>
+                <option value="redo_transaction">Redo a Transaction</option>
+                <option value="clear_all_transaction">Clear All Transactions</option>
+                <option value="reset_transaction">Reset Num and Transactions</option>
+        </select>
+    </div>
+    <p>Sum Total: </p>
+    <p id="sumtag"></p>
+    <p>Total Transactions: </p>
+    <p id="transtag"></p>
+
+
+
+
+
+
+
+    </div>
+    
+
+
+</body>
+
+</html>
