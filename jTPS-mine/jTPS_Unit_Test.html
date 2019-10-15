@@ -23,44 +23,42 @@
 
     <div id="layout">
         <p><strong><h2>testAdd</h2></strong></p>
-
         <p><strong>Add 5 Transaction: </strong> 
             <button id="submit_button"  onclick="add5Button()">Submit</button>
-            <p id="getNum5">num.getNum: '5' </p>
-            <p id="getSize5">tps.getSize: '1'</p>
-            <p id="getRedoSize5">tps.getRedoSize: '0'</p>
-            <p id="getUndoSize5">tps.getUndoSize: '1' </p>
+            <p >num.getNum: '5' <input class="input_style" id="getNum5"/> </p>
+            <p >tps.getSize: '1' <input class="input_style" id="getSize5"/> </p>
+            <p >tps.getRedoSize: '0' <input class="input_style" id="getRedoSize5"/> </p>
+            <p >tps.getUndoSize: '1' <input class="input_style" id="getUndoSize5"/> </p>
         </p>
-
         <p><strong>Add 10 Transaction: </strong> 
             <button id="submit_button2"  onclick="add10Button()">Submit</button>
-            <p id="getNum10">num.getNum: '15' </p>
-            <p id="getSize10">tps.getSize: '2'</p>
-            <p id="getRedoSize10">tps.getRedoSize: '0'</p>
-            <p id="getUndoSize10">tps.getUndoSize: '2' </p>
+            <p >num.getNum: '15' <input class="input_style"  id="getNum10"/> </p>
+            <p >tps.getSize: '2'<input class="input_style" id="getSize10"/> </p>
+            <p>tps.getRedoSize: '0'<input class="input_style" id="getRedoSize10"/> </p>
+            <p >tps.getUndoSize: '2' <input class="input_style" id="getUndoSize10"/> </p>
         </p>
 
         <p><strong>Add 20 Transaction: </strong> 
             <button id="submit_button3"  onclick="add20Button()">Submit</button>
-            <p id="getNum20">num.getNum: '35' </p>
-            <p id="getSize20">tps.getSize: '3'</p>
-            <p id="getRedoSize20">tps.getRedoSize: '0'</p>
-            <p id="getUndoSize20">tps.getUndoSize: '3' </p>
+            <p>num.getNum: '35' <input class="input_style"   id="getNum20"/></p>
+            <p >tps.getSize: '3'<input class="input_style" id="getSize20" /></p>
+            <p >tps.getRedoSize: '0'<input class="input_style" id="getRedoSize20" /></p>
+            <p >tps.getUndoSize: '3' <input class="input_style" id="getUndoSize20" /></p>
         </p>
-
+<!-- <input class="input_style"  /> -->
         <br/><br/>
         <p><strong><h2>testAndMask</h2></strong></p>
 
         <p><strong>Add 12 Transaction: </strong> 
             <button id="submit_button"  onclick="add12Button()">Submit</button>
-            <p id="getNum12">num.getNum: '4' </p>
-            <p id="getSize12">tps.getSize: '2'</p>
+            <p >num.getNum: '4' <input class="input_style" id="getNum12" /></p>
+            <p >tps.getSize: '2'<input class="input_style" id="getSize12" /></p>
 
             <p><h4>tps undo transaction</h4></p>
-            <p id="getNum12undo">num.getNum: '12' </p>
-            <p id="getSize12undo">tps.getSize: '2'</p>
-            <p id="getRedoSize12undo">tps.getRedoSize: '1'</p>
-            <p id="getUndoSize12undo">tps.getUndoSize: '1' </p>
+            <p>num.getNum: '12' <input class="input_style"  id="getNum12undo" /></p>
+            <p >tps.getSize: '2'<input class="input_style" id="getSize12undo" /></p>
+            <p >tps.getRedoSize: '1'<input class="input_style" id="getRedoSize12undo" /></p>
+            <p>tps.getUndoSize: '1' <input class="input_style" id="getUndoSize12undo" /></p>
         </p>
 
         <br/><br/>
@@ -68,53 +66,53 @@
 
         <p><strong>Add 3 Transaction: (5, 10, 20)</strong> 
             <button id="submit_button"  onclick="add3Button()">Submit</button>
-            <p id="getNum3">num.getNum: '0' </p>
-            <p id="hasTransactionUndo">tps.hasTransactionUndo: 'false'</p>
-            <p id="hasTransactionRedo">tps.hasTransactionRedo: 'false'</p>
+            <p >num.getNum: '0' <input class="input_style" id="getNum3" /></p>
+            <p >tps.hasTransactionUndo: 'false' <input class="input_style" id="hasTransactionUndo" /></p>
+            <p >tps.hasTransactionRedo: 'false' <input class="input_style" id="hasTransactionRedo" /></p>
             <p ><h4>tps.addTransaction-5,tps.addTransaction-10,tps.addTransaction-20</h4></p>
 
-            <p id="num3">tps.hasTransactionUndo 'True'</p>
-            <p id="num4">tps.hasTransactionRedo 'False'</p>
-            <p id="num5">num.getNum '35'</p>
-            <p id="num6">tps.hasTransactionUndo 'True'</p>
-            <p id="num7">tps.getSize '3'</p>
-            <p id="num8">tps.getRedoSize '0'</p>
-            <p id="num9">tps.getUndoSize '3'</p>
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num3" /></p>
+            <p >tps.hasTransactionRedo 'False' <input class="input_style" id="num4" /></p>
+            <p >num.getNum '35' <input class="input_style" id="num5" /></p>
+            <p>tps.hasTransactionUndo 'True' <input class="input_style" id="num6"  /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num7" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num8" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num9" /></p>
 
             <p><h4>Undo a transaction</h4></p>
-            <p id="num10">tps.hasTransactionUndo 'True'</p>
-            <p id="num11">tps.hasTransactionRedo 'True'</p>
-            <p id="num12">num.getNum '15'</p>
-            <p id="num13">tps.getSize '3'</p>
-            <p id="num14">tps.getRedoSize '1'</p>
-            <p id="num15">tps.getUndoSize '2'</p>
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num10" /></p>
+            <p >tps.hasTransactionRedo 'True' <input class="input_style" id="num11" /></p>
+            <p >num.getNum '15' <input class="input_style" id="num12" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num13" /></p>
+            <p >tps.getRedoSize '1' <input class="input_style" id="num14" /></p>
+            <p >tps.getUndoSize '2' <input class="input_style" id="num15" /></p>
 
             <p><h4>Undo another</h4></p>
             <p><h4>tps.undoTransaction</h4></p>
-            <p id="num16">tps.hasTransactionUndo 'True'</p>
-            <p id="num17">tps.hasTransactionRedo 'True'</p>
-            <p id="num18">num.getNum '5'</p>
-            <p id="num19">tps.getSize '3'</p>
-            <p id="num20">tps.getRedoSize '2'</p>
-            <p id="num21">tps.getUndoSize '1'</p>
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num16" /></p>
+            <p >tps.hasTransactionRedo 'True' <input class="input_style" id="num17" /></p>
+            <p >num.getNum '5' <input class="input_style" id="num18" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num19" /></p>
+            <p >tps.getRedoSize '2' <input class="input_style" id="num20"/></p>
+            <p >tps.getUndoSize '1' <input class="input_style" id="num21" /></p>
 
             <p><h4>And another</h4></p>
             <p><h4>tps.undoTransaction</h4></p>
-            <p id="num22">tps.hasTransactionUndo 'False'</p>
-            <p id="num23">tps.hasTransactionRedo 'True'</p>
-            <p id="num24">num.getNum '0'</p>
-            <p id="num25">tps.getSize '3'</p>
-            <p id="num26">tps.getRedoSize '3'</p>
-            <p id="num27">tps.getUndoSize '0'</p>
+            <p >tps.hasTransactionUndo 'False' <input class="input_style" id="num22" /></p>
+            <p >tps.hasTransactionRedo 'True' <input class="input_style" id="num23" /></p>
+            <p>num.getNum '0' <input class="input_style" id="num24"  /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num25" /></p>
+            <p >tps.getRedoSize '3'<input class="input_style" id="num26" /></p>
+            <p >tps.getUndoSize '0' <input class="input_style" id="num27" /></p>
 
             <p><h4>We have no more to Undo so this should do nothing</h4></p>
             <p><h4>tps.undoTransaction</h4></p>
-            <p id="num28">tps.hasTransactionUndo 'False'</p>
-            <p id="num29">tps.hasTransactionRedo 'True'</p>
-            <p id="num30">num.getNum '0'</p>
-            <p id="num31">tps.getSize '3'</p>
-            <p id="num32">tps.getRedoSize '3'</p>
-            <p id="num33">tps.getUndoSize '0'</p>
+            <p>tps.hasTransactionUndo 'False' <input class="input_style"  id="num28" /></p>
+            <p >tps.hasTransactionRedo 'True' <input class="input_style" id="num29" /></p>
+            <p>num.getNum '0' <input class="input_style"  id="num30" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num31" /></p>
+            <p >tps.getRedoSize '3' <input class="input_style" id="num32" /></p>
+            <p >tps.getUndoSize '0' <input class="input_style" id="num33" /></p>
 
         </p>
 

@@ -11,3 +11,9 @@ body {
     grid-row-gap: 15px;
     padding: 5px 10px 5px 10px;
 }
+
+.input_style {
+    color: green;
+    float: right;
+    padding-left: 5px;
+}
