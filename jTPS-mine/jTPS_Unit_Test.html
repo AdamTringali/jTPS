@@ -22,7 +22,7 @@
 
 
     <div id="layout">
-        <p><strong><h2>testAdd</h2></strong></p>
+        <p><strong><h2 class="header">testAdd</h2></strong></p>
         <p><strong>Add 5 Transaction: </strong> 
             <button id="submit_button"  onclick="add5Button()">Submit</button>
             <p >num.getNum: '5' <input class="input_style" id="getNum5"/> </p>
@@ -47,7 +47,7 @@
         </p>
 <!-- <input class="input_style"  /> -->
         <br/><br/>
-        <p><strong><h2>testAndMask</h2></strong></p>
+        <p><strong><h2 class="header">testAndMask</h2></strong></p>
 
         <p><strong>Add 12 Transaction: </strong> 
             <button id="submit_button"  onclick="add12Button()">Submit</button>
@@ -62,7 +62,7 @@
         </p>
 
         <br/><br/>
-        <p><strong><h2>testUndo</h2></strong></p>
+        <p><strong><h2 class="header">testUndo</h2></strong></p>
 
         <p><strong>Add 3 Transaction: (5, 10, 20)</strong> 
             <button id="submit_button"  onclick="add3Button()">Submit</button>
@@ -113,9 +113,102 @@
             <p >tps.getSize '3' <input class="input_style" id="num31" /></p>
             <p >tps.getRedoSize '3' <input class="input_style" id="num32" /></p>
             <p >tps.getUndoSize '0' <input class="input_style" id="num33" /></p>
-
         </p>
 
+        <p><strong><h2 class="header">testRedo</h2></strong></p>
+        <p><strong>Add 3 Transaction: (5, 10, 20)</strong> 
+            <button id="submit_button"  onclick="testRedo()">Submit</button>
+            
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num34" /></p>
+            <p >tps.hasTransactionRedo 'False' <input class="input_style" id="num35" /></p>
+            <p >num.getNum '35' <input class="input_style" id="num36" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num38" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num39" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num40" /></p>
+
+            <p><strong>Undo a transaction then redo it</strong> 
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num41" /></p>
+            <p >tps.hasTransactionRedo 'False' <input class="input_style" id="num42" /></p>
+            <p >num.getNum '35' <input class="input_style" id="num43" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num45" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num46" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num47" /></p>
+
+            <p><strong> Undo two transactions then do them</strong> 
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num48" /></p>
+            <p >tps.hasTransactionRedo 'False' <input class="input_style" id="num49" /></p>
+            <p >num.getNum '35' <input class="input_style" id="num50" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num52" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num53" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num54" /></p>
+
+
+            <p><strong> Undo all three transactions then redo them </strong> 
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num55" /></p>
+            <p >tps.hasTransactionRedo 'False' <input class="input_style" id="num56" /></p>
+            <p >num.getNum '35' <input class="input_style" id="num57" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num59" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num60" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num61" /></p>
+
+            <p><strong> Undo three transactions then redo two </strong> 
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num62" /></p>
+            <p >tps.hasTransactionRedo 'True' <input class="input_style" id="num63" /></p>
+            <p >num.getNum '15' <input class="input_style" id="num64" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num65" /></p>
+            <p >tps.getRedoSize '1' <input class="input_style" id="num66" /></p>
+            <p >tps.getUndoSize '2' <input class="input_style" id="num67" /></p>
+
+            <p><strong> Undo all three transactions and redo four, should not produce error 
+                but the last redo should do nothing
+            </strong> 
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num68" /></p>
+            <p >tps.hasTransactionRedo 'False' <input class="input_style" id="num69" /></p>
+            <p >num.getNum '35' <input class="input_style" id="num70" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num71" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num72" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num73" /></p>
+            
+        </p>
+        <p><strong><h2 class="header">testClear</h2></strong></p>
+        <p><strong>Add 3 Transaction: (5, 10, 20)</strong> 
+            <button id="submit_button"  onclick="testClear()">Submit</button>
+            
+            <p >tps.hasTransactionUndo 'True' <input class="input_style" id="num74" /></p>
+            <p >tps.hasTransactionRedo 'False' <input class="input_style" id="num75" /></p>
+            <p >num.getNum '35' <input class="input_style" id="num76" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num77" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num78" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num79" /></p>
+
+            <p><strong>Clear all the transactions</strong> 
+            <p >num.getNum '35' <input class="input_style" id="num80" /></p>
+            <p >tps.getSize '0' <input class="input_style" id="num81" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num82" /></p>
+            <p >tps.getUndoSize '0' <input class="input_style" id="num83" /></p>
+
+            <p><strong>Add 3 Transaction: (5, 10, 20)</strong> 
+            <p >num.getNum '70' <input class="input_style" id="num84" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num85" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num86" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num87" /></p>
+
+
+            <p><strong>Clear them all out again </strong> 
+            <p >num.getNum '70' <input class="input_style" id="num88" /></p>
+            <p >tps.getSize '0' <input class="input_style" id="num89" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num90" /></p>
+            <p >tps.getUndoSize '0' <input class="input_style" id="num91" /></p>
+
+            <p><strong>Add 3 Transaction: (5, 10, 20)</strong> 
+            <p >num.getNum '105' <input class="input_style" id="num92" /></p>
+            <p >tps.getSize '3' <input class="input_style" id="num93" /></p>
+            <p >tps.getRedoSize '0' <input class="input_style" id="num94" /></p>
+            <p >tps.getUndoSize '3' <input class="input_style" id="num95" /></p>
+
+
+            
+        </p>
 
 
 
